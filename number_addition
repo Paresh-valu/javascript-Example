@@ -9,44 +9,30 @@
 
 <section>
     <div>
-        
-            <input type="text" value="" placeholder="Add Number" id="get_number" />
-            <button class="sub_btn" id="sub_btn" onclick="getValue()">Submit</button>
-            <p class="" id="disply_number"></p>
+     <input type="text" value="" placeholder="Add Number" id="get_number" />
+    <button class="sub_btn" id="sub_btn" onclick="getValue()">Submit</button>
+    <p class="" id="disply_number"></p>
     </div>
 </section>
-
-
-
-    <script>
-       
-
-        function getValue(){
-            const getNumber = document.getElementById('get_number').value
-            const submitNumber = document.getElementById('sub_btn')
-            const dpy_num = document.getElementById('disply_number')
-           
-            const oldArray = myArray = [];
-            for (let i = 1; i <= getNumber; i++) {
-            const newArray = myArray.push(i)
-            console.log(oldArray);
-            }
-            const totalNum = oldArray.reduce(function(acc , currval){
-            console.log(`acc is ${acc} and currval is ${currval} `)
-            return acc + currval
-        },0)
-        console.log(totalNum)
-        dpy_num.innerHTML=totalNum
-        }
-
-
-
-         
-        
-        
-       
-        
-    </script>
+<script>
+     function getValue(){
+    const getNumber = document.getElementById('get_number').value
+    const submitNumber = document.getElementById('sub_btn')
+    const dpy_num = document.getElementById('disply_number')
+   
+    const oldArray = myArray = [];
+    for (let i = 1; i <= getNumber; i++) {
+    const newArray = myArray.push(i)
+    console.log(oldArray);
+    }
+    const totalNum = oldArray.reduce(function(acc , currval){
+    console.log(`acc is ${acc} and currval is ${currval} `)
+    return acc + currval
+},0)
+console.log(totalNum)
+dpy_num.innerHTML=totalNum
+}    
+</script>
 
 
 
